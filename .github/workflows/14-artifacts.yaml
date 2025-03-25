@@ -20,7 +20,7 @@ jobs:
               uses: actions/cache@v3 
               id: cache
               with:
-                  path: 14- artifacts/caching/react/-app/node-modules
+                  path: 14-artifacts/caching/react/-app/node-modules
                   key: deps-node-module=${{ hashFiles('14-artifacts/react-app/package-lock.json')}}
             - name: Install dependecies
               if: steps.cache.outputs.cache-hit != 'true'
