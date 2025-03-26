@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  backwards-compatibilty:
+  backwards-compatibility:
       name: ${{ matrix.os}}-${{ matrix.node-version}}
       runs-on: ${{ matrix.os }}
       strategy:
@@ -29,4 +29,6 @@ jobs:
               if: matrix.tag == 'experimental'
               run: exit 1
             - name: Perform some tests
-              run: echo running test on OS ${{ matrix.os }} and ${{ matrix.node-version }}""
+              run: echo "Running test on OS ${{ matrix.os }} and NodeJS ${{ matrix.node-version }}"
+            - name: Upload tets results
+              run: echo "Uploading test result"
