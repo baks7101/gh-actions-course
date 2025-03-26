@@ -22,7 +22,7 @@ jobs:
                   tag: experimental
       steps: 
             - name: Setup node
-              uses: action/setup-node@3
+              uses: action/setup-node@v3
               with:
                 node-version: ${{ matrix.node-version }}
             - name: fail if experimental
