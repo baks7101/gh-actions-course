@@ -3,7 +3,7 @@ name: 15 - Working with Matrices
 on:
   workflow_dispatch:
 
-job:
+jobs:
     backwards-compatibilty:
       name: ${{ matrix.os}}-${{ matrix.node-version}}
       runs-on: ${{ matrix.os }}
